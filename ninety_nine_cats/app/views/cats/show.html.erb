@@ -1,0 +1,10 @@
+<h1>Name: <%= @cat.name %></h1>
+
+<h3>Sex: <%= @cat.sex %></h3>
+<h3>Birth Date: <%= @cat.birth_date %></h3>
+<h3>Color: <%= @cat.color %></h3>
+<h3>Rental Requests: </h3>
+  <% @cat.rental_requests.sort_by{|request| request.start_date}.each do |request| %>
+    <li> <%= request.start_date %> to: <%= request.end_date %></li>
+  <% end %>
+<p>Description: <%= @cat.description %></p>

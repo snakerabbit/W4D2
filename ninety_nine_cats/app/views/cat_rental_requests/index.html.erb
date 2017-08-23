@@ -1,0 +1,6 @@
+<h1>Cat Rentals</h1>
+
+<% @rental_requests.each do |rental| %>
+  <li> <%= rental.cat.name %> <%= link_to "Show Request", cat_rental_request_url(rental)   %></li>
+
+<% end %>
